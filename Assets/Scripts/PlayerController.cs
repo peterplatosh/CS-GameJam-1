@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Vector3 spawnPos;
     public GameObject Bullet;
-
+    public Transform[] children;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +24,8 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
-
         Debug.Log("shoot");
-        Instantiate(Bullet, transform.position, transform.rotation);
+        children = GetComponentsInChildren<Transform>();
+        Instantiate(Bullet, children[1].position, transform.rotation);
     }
 }

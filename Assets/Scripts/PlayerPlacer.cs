@@ -7,6 +7,7 @@ public class PlayerPlacer : MonoBehaviour
     public int playerCount;
     public GameObject player;
     public float circRadius;
+    public float rotationSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class PlayerPlacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(new Vector3(0f, 0f, -Input.GetAxis("Horizontal") * rotationSpeed) * Time.deltaTime);
     }
 
     void SpawnPlayers(int playerCount, float circRadius)
