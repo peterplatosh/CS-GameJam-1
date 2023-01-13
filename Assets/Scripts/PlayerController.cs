@@ -27,5 +27,6 @@ public class PlayerController : MonoBehaviour
         Debug.Log("shoot");
         children = GetComponentsInChildren<Transform>();
         Instantiate(Bullet, children[1].position, transform.rotation);
+        children[3].GetComponent<ParticleSystem>().Play();
     }
 }
