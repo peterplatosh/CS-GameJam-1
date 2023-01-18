@@ -6,11 +6,13 @@ public class Enemy : MonoBehaviour
 {
     public Transform goal;
     public float moveSpeed;
+    public ParticleSystem explosion;
 
     // Start is called before the first frame update
     void Start()
     {
         goal = GameObject.FindGameObjectWithTag("Goal").transform;
+        explosion = GetComponentInChildren<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -27,7 +29,10 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Debug.Log("hit!");
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            explosion.Play();
             Destroy(gameObject);
+            
         }
     }
 }

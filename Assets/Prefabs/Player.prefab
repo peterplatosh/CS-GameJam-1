@@ -122,7 +122,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -206,7 +206,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -228,6 +228,10 @@ PrefabInstance:
     - target: {fileID: 9091261225162720016, guid: 24e7715b690aa42c39eb3170d2fd80e3, type: 3}
       propertyPath: m_Name
       value: _Muzzle Flash_
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091261225162720016, guid: 24e7715b690aa42c39eb3170d2fd80e3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9091261225162720045, guid: 24e7715b690aa42c39eb3170d2fd80e3, type: 3}
       propertyPath: m_RootOrder
@@ -359,6 +363,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9091261225162720046, guid: 24e7715b690aa42c39eb3170d2fd80e3, type: 3}
       propertyPath: InitialModule.startColor.maxGradient.m_NumAlphaKeys
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091261225162720047, guid: 24e7715b690aa42c39eb3170d2fd80e3, type: 3}
+      propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
