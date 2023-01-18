@@ -22,9 +22,9 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Goal"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
-            print("You died!");
+            Destroy(this);
         }
     }
 }
