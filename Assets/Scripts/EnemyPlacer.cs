@@ -13,8 +13,8 @@ public class EnemyPlacer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        xWidth = Camera.main.pixelWidth;
-        yHeight = Camera.main.pixelHeight;
+        xWidth = Camera.main.pixelWidth / 20;
+        yHeight = Camera.main.pixelHeight / 20;
     }
 
     // Update is called once per frame
