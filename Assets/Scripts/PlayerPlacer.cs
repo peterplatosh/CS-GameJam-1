@@ -8,6 +8,8 @@ public class PlayerPlacer : MonoBehaviour
     public GameObject player;
     public float circRadius;
     public float rotationSpeed;
+    public int tempPlayerCount;
+    public int k;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,20 @@ public class PlayerPlacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject[] getCount = GameObject.FindGameObjectsWithTag("Cannon");
+        tempPlayerCount = getCount.Length;
         transform.Rotate(new Vector3(0f, 0f, -Input.GetAxis("Horizontal") * rotationSpeed) * Time.deltaTime);
+
+        if(tempPlayerCount != playerCount && tempPlayerCount != 0)
+        {
+            playerCount -= 1;
+            k = getCount.Length;
+            //for( k; k < getCount.Length; k++)
+            //{
+            //    Destroy(getCount[k].gameObject);
+            //}
+            SpawnPlayers(playerCount, circRadius);
+        }
     }
 
     void SpawnPlayers(int playerCount, float circRadius)

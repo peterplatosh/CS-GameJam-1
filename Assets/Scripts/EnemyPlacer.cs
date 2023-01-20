@@ -8,7 +8,9 @@ public class EnemyPlacer : MonoBehaviour
 
     public int enemyCount;
     public int enemyMax;
+    public int spawnPoint;
     public GameObject enemy;
+    public List<Transform> listOspawns;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +27,22 @@ public class EnemyPlacer : MonoBehaviour
 
         if (enemyCount <= enemyMax)
         {
-            SpawnEnemy();
+            PlaceEnemy();
         }
     }
+
+
+    void PlaceEnemy()
+    {
+        spawnPoint = Random.Range(1, 15);
+        Instantiate(enemy, new Vector3(listOspawns[spawnPoint].transform.position.x, listOspawns[spawnPoint].transform.position.y, listOspawns[spawnPoint].transform.position.z) , Quaternion.identity);
+    }
+
+
+
+
+
+
 
     void SpawnEnemy()
     {

@@ -29,10 +29,20 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Debug.Log("hit!");
-            Instantiate(explosion, transform.position, Quaternion.identity);
-            explosion.Play();
+            //Instantiate(explosion, transform.position, Quaternion.identity);
+            //explosion.Play();
             Destroy(gameObject);
             
+        }
+        if (collision.gameObject.CompareTag("Goal"))
+        {
+            Debug.Log("Ran into the goal");
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("Cannon"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }
