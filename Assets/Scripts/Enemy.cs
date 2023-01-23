@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        moveSpeed = Random.Range(1f,3f);
         goal = GameObject.FindGameObjectWithTag("Goal").transform;
         explosion = GetComponentInChildren<ParticleSystem>();
     }

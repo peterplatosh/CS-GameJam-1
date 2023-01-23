@@ -27,11 +27,12 @@ public class PlayerPlacer : MonoBehaviour
         {
             playerCount -= 1;
             k = getCount.Length;
-            //for( k; k < getCount.Length; k++)
-            //{
-            //    Destroy(getCount[k].gameObject);
-            //}
+            for(int k = 0; k < getCount.Length; k++)
+            {
+                Destroy(getCount[k].gameObject);
+            }
             SpawnPlayers(playerCount, circRadius);
+            rotationSpeed += 12;
         }
     }
 
