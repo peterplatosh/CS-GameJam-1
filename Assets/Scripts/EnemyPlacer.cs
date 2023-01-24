@@ -39,11 +39,6 @@ public class EnemyPlacer : MonoBehaviour
     }
 
 
-
-
-
-
-
     void SpawnEnemy()
     {
         Vector3 pos = new();
